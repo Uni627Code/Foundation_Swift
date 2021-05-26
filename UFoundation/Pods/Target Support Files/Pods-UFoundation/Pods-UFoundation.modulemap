@@ -1,0 +1,6 @@
+framework module Pods_UFoundation {
+  umbrella header "Pods-UFoundation-umbrella.h"
+
+  export *
+  module * { export * }
+}

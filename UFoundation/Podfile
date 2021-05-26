@@ -1,0 +1,58 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+# Uncomment the next line to define a global platform for your project
+ platform :ios, '10.0'
+
+flutter_application_path = '../flutter_module/'
+load File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')
+
+target 'UFoundation' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  install_all_flutter_pods(flutter_application_path)
+
+#框架需求
+pod 'SwiftyJSON'
+pod 'SnapKit'
+pod 'KeychainAccess'
+#pod 'Kingfisher'
+pod 'MJRefresh'
+pod 'IQKeyboardManagerSwift'
+pod 'Moya'
+pod 'ReachabilitySwift'
+pod 'SQLite.swift' #用swift封装的sqlite 3操作框架
+pod 'SwiftyImage'
+pod 'SwiftyTimer'
+pod 'SwiftyColor'
+pod 'SwiftDate'
+
+
+#常用工具
+pod 'dsBridge'
+pod 'AttributedString'
+pod 'pop'
+pod 'EGOCache'
+pod 'DateToolsSwift'
+
+pod 'Instructions' #应用于操作指南、新手教程
+pod 'RAMAnimatedTabBarController' #各单元添加动画效果
+
+
+#优化库
+pod 'Texture'
+
+#代码检验工具
+pod 'SwiftLint'
+pod 'JPFPSStatus'
+
+  target 'UFoundationTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'UFoundationUITests' do
+    # Pods for testing
+  end
+
+end

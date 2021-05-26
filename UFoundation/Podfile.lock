@@ -1,0 +1,174 @@
+PODS:
+  - Alamofire (5.4.2)
+  - AttributedString (1.6.9)
+  - DateToolsSwift (5.0.0)
+  - dsBridge (3.0.6)
+  - EGOCache (2.2.0)
+  - Flutter (1.0.0)
+  - flutter_boost (0.0.2):
+    - Flutter
+  - flutter_module (0.0.1):
+    - Flutter
+  - FlutterPluginRegistrant (0.0.1):
+    - Flutter
+    - flutter_boost
+  - Instructions (2.0.1)
+  - IQKeyboardManagerSwift (6.5.6)
+  - JPFPSStatus (0.1.1)
+  - KeychainAccess (4.2.2)
+  - MJRefresh (3.5.0)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - PINCache (3.0.3):
+    - PINCache/Arc-exception-safe (= 3.0.3)
+    - PINCache/Core (= 3.0.3)
+  - PINCache/Arc-exception-safe (3.0.3):
+    - PINCache/Core
+  - PINCache/Core (3.0.3):
+    - PINOperation (~> 1.2.1)
+  - PINOperation (1.2.1)
+  - PINRemoteImage/Core (3.0.3):
+    - PINOperation
+  - PINRemoteImage/iOS (3.0.3):
+    - PINRemoteImage/Core
+  - PINRemoteImage/PINCache (3.0.3):
+    - PINCache (~> 3.0.3)
+    - PINRemoteImage/Core
+  - pop (1.0.12)
+  - RAMAnimatedTabBarController (5.2.0)
+  - ReachabilitySwift (5.0.0)
+  - SnapKit (5.0.1)
+  - SQLite.swift (0.12.2):
+    - SQLite.swift/standard (= 0.12.2)
+  - SQLite.swift/standard (0.12.2)
+  - SwiftDate (6.3.1)
+  - SwiftLint (0.43.1)
+  - SwiftyColor (1.2.1)
+  - SwiftyImage (1.6.0)
+  - SwiftyJSON (5.0.1)
+  - SwiftyTimer (2.1.0)
+  - Texture (3.0.0):
+    - Texture/AssetsLibrary (= 3.0.0)
+    - Texture/Core (= 3.0.0)
+    - Texture/MapKit (= 3.0.0)
+    - Texture/Photos (= 3.0.0)
+    - Texture/PINRemoteImage (= 3.0.0)
+    - Texture/Video (= 3.0.0)
+  - Texture/AssetsLibrary (3.0.0):
+    - Texture/Core
+  - Texture/Core (3.0.0)
+  - Texture/MapKit (3.0.0):
+    - Texture/Core
+  - Texture/Photos (3.0.0):
+    - Texture/Core
+  - Texture/PINRemoteImage (3.0.0):
+    - PINRemoteImage/iOS (~> 3.0.0)
+    - PINRemoteImage/PINCache
+    - Texture/Core
+  - Texture/Video (3.0.0):
+    - Texture/Core
+
+DEPENDENCIES:
+  - AttributedString
+  - DateToolsSwift
+  - dsBridge
+  - EGOCache
+  - Flutter (from `../flutter_module/.ios/Flutter/engine`)
+  - flutter_boost (from `../flutter_module/.ios/.symlinks/plugins/flutter_boost/ios`)
+  - flutter_module (from `../flutter_module/.ios/Flutter`)
+  - FlutterPluginRegistrant (from `../flutter_module/.ios/Flutter/FlutterPluginRegistrant`)
+  - Instructions
+  - IQKeyboardManagerSwift
+  - JPFPSStatus
+  - KeychainAccess
+  - MJRefresh
+  - Moya
+  - pop
+  - RAMAnimatedTabBarController
+  - ReachabilitySwift
+  - SnapKit
+  - SQLite.swift
+  - SwiftDate
+  - SwiftLint
+  - SwiftyColor
+  - SwiftyImage
+  - SwiftyJSON
+  - SwiftyTimer
+  - Texture
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - AttributedString
+    - DateToolsSwift
+    - dsBridge
+    - EGOCache
+    - Instructions
+    - IQKeyboardManagerSwift
+    - JPFPSStatus
+    - KeychainAccess
+    - MJRefresh
+    - Moya
+    - PINCache
+    - PINOperation
+    - PINRemoteImage
+    - pop
+    - RAMAnimatedTabBarController
+    - ReachabilitySwift
+    - SnapKit
+    - SQLite.swift
+    - SwiftDate
+    - SwiftLint
+    - SwiftyColor
+    - SwiftyImage
+    - SwiftyJSON
+    - SwiftyTimer
+    - Texture
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: "../flutter_module/.ios/Flutter/engine"
+  flutter_boost:
+    :path: "../flutter_module/.ios/.symlinks/plugins/flutter_boost/ios"
+  flutter_module:
+    :path: "../flutter_module/.ios/Flutter"
+  FlutterPluginRegistrant:
+    :path: "../flutter_module/.ios/Flutter/FlutterPluginRegistrant"
+
+SPEC CHECKSUMS:
+  Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
+  AttributedString: 46224811c2a7297af9c5b0b946e2306796d9333a
+  DateToolsSwift: 4207ada6ad615d8dc076323d27037c94916dbfa6
+  dsBridge: 48b62ee8a411ad601a88d6f6c8cf6cb634b206b7
+  EGOCache: 191fd213da6804d487b49b1a91772ba904f3e324
+  Flutter: ac41d61a47ae5bf8195a5598d2d63754888ec0d5
+  flutter_boost: d3e480158af541c70fd8b96e5b1de1fca5bc14ba
+  flutter_module: d1e1ff44505640bd9aa37f23f63380c646272be4
+  FlutterPluginRegistrant: 03a06fa5f754c611bb6c96f42acf9432e8c4515d
+  Instructions: dd428e3776fcdcec18bf4242b9d3fb2d1cbd6cc9
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  JPFPSStatus: 03f32aa3d4d7d0c5bf56f6f3e7cf8b7280a5f52c
+  KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
+  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  PINCache: 7a8fc1a691173d21dbddbf86cd515de6efa55086
+  PINOperation: 00c935935f1e8cf0d1e2d6b542e75b88fc3e5e20
+  PINRemoteImage: f1295b29f8c5e640e25335a1b2bd9d805171bd01
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+  RAMAnimatedTabBarController: 6863a386e7ae2ab227cd60aa73ab8ff56cdacfdd
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
+  SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
+  SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
+  SwiftyColor: a2f468071c1b96be1ba41a0be7cf70d645cd7dcc
+  SwiftyImage: 65c71a147f417fc0fe137d17b135aaa666279a09
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+  SwiftyTimer: 02dd6cf10cbc71cbf67cec494f6e5eb782102543
+  Texture: 2f109e937850d94d1d07232041c9c7313ccddb81
+
+PODFILE CHECKSUM: 77ae635cea5a06302f48f1cafb7538b90c3384ab
+
+COCOAPODS: 1.10.1
