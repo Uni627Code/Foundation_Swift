@@ -12,6 +12,7 @@ protocol BindableType {
     //关联类型
     associatedtype ViewModelType
 
+//    协议中只是声明了属性，在A和B里还要手动实现以下setter和getter方法才行
     var viewModel: ViewModelType! { get set }
 
     func bindViewModel()

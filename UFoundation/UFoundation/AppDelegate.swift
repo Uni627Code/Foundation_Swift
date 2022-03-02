@@ -17,12 +17,14 @@ class AppDelegate: FlutterAppDelegate {
 
     override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        //
-        let router = PlatformRouter()
-        FlutterBoost.instance()?.setup(application, delegate: router, callback: { (engine) in
-            print("#######  flutterEngine  #########")
-        })
-        
+        //初始化
+        if let flutterBoost = FlutterBoost.instance() {
+            let router = PlatformRouter()
+            flutterBoost.setup(application, delegate: router, callback: { (engine) in
+                PrintLog.info("#######  flutterEngine  #########")
+            })        
+        }
+       
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = .white
         let vc = MainTabbarViewController()

@@ -20,7 +20,7 @@ pod 'KeychainAccess'
 pod 'MJRefresh'
 pod 'IQKeyboardManagerSwift'
 pod 'Moya'
-pod 'ReachabilitySwift'
+#pod 'ReachabilitySwift'
 pod 'SQLite.swift' #用swift封装的sqlite 3操作框架
 pod 'SwiftyImage'
 pod 'SwiftyTimer'

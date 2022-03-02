@@ -12,19 +12,23 @@ import FlutterPluginRegistrant
 import Flutter
 
 class PlatformRouter: NSObject {
-
+    
+    
+    ///用来存返回flutter侧返回结果的表
+    var resultTable:Dictionary<String,([AnyHashable:Any]?)->Void> = [:];
+    
     func openNative(_ url: String,
                     urlParams: [AnyHashable : Any],
                     exts: [AnyHashable : Any],
                     animated: Bool,
                     completion: @escaping (Bool) -> Void) {
-
+        
         let prefix = "nativebus://"
         guard url.hasPrefix(prefix) else {
             completion(false)
             return
         }
-
+        
         let namespace = Bundle.main.infoDictionary!["CFBundleExecutable"] as! String
         let viewControllerName = String(url.dropFirst(prefix.count))
         guard let cls: AnyClass = NSClassFromString(namespace + "." + viewControllerName),
@@ -34,46 +38,63 @@ class PlatformRouter: NSObject {
         }
         let targetViewController = clsType.init()
         targetViewController.urlParams = urlParams
-        self.navigationController().pushViewController(targetViewController, animated: animated)
+        //可以用参数来控制是push还是pop
+        let isPresent = exts["isPresent"] as? Bool ?? false
+        let isAnimated = exts["isAnimated"] as? Bool ?? true
+        if(isPresent){
+            navigationController().present(targetViewController, animated: isAnimated, completion: nil)
+        }else{
+            navigationController().pushViewController(targetViewController, animated: isAnimated)
+        }
     }
-
-    func open(_ url: String,
-              urlParams: [AnyHashable : Any],
-              exts: [AnyHashable : Any],
-              completion: @escaping (Bool) -> Void) {
+    
+    /// 打开flutter
+    /// - Parameters:
+    ///   - url: flutter 对应页面
+    ///   - urlParams: 参数
+    ///   - exts: 跳转类型等其他不需要传的参数
+    ///   - completion: completion description
+    func open(_ url: String, urlParams: [AnyHashable : Any], exts: [AnyHashable : Any], completion: @escaping (Bool) -> Void) {
         var animated = false
         if exts["animated"] != nil {
             animated = exts["animated"] as! Bool
         }
-
-        guard url.hasPrefix("flutterbus://") else {
-            //处理 nativebus: 页面
-            openNative(url, urlParams: urlParams, exts: exts, animated: animated, completion: completion)
-            return
-        }
-
-        if let vc = FBFlutterViewContainer() {
-            vc.setName(url, uniqueId: "1", params: urlParams)
+                
+        if let vc = GAFlutterRooterViewController() {
+            vc.setName(url, uniqueId: "333", params: urlParams)
             navigationController().pushViewController(vc, animated: animated)
         }
         completion(true)
     }
-
-    func present(_ url: String, urlParams: [AnyHashable : Any], exts: [AnyHashable : Any],
-                 completion: @escaping (Bool) -> Void) {
- 
+    
+    
+    /// present 跳转
+    /// - Parameters:
+    ///   - url: flutter name
+    ///   - urlParams: 传入flutter的参数
+    ///   - exts: 跳转类型
+    ///   - completion: completion description
+    func present(_ url: String, urlParams: [AnyHashable : Any], exts: [AnyHashable : Any], completion: @escaping (Bool) -> Void) {
+        
         if let vc = FBFlutterViewContainer() {
             var animated = false
             if exts["animated"] != nil {
                 animated = exts["animated"] as! Bool
             }
-            vc.setName(url, uniqueId: "", params: urlParams)
+            vc.setName(url, uniqueId: "222", params: urlParams)
             navigationController().present(vc, animated: animated) {
                 completion(true)
             }
         }
     }
-
+    
+    
+    /// 关闭flutter 页面
+    /// - Parameters:
+    ///   - uid: uid description
+    ///   - result: result description
+    ///   - exts: exts description
+    ///   - completion: completion description
     func close(_ uid: String, result: [AnyHashable : Any], exts: [AnyHashable : Any],
                completion: @escaping (Bool) -> Void) {
         var animated = false
@@ -90,9 +111,9 @@ class PlatformRouter: NSObject {
             navigationController().popViewController(animated: animated)
         }
     }
-
+    
     func navigationController() -> UINavigationController {
-
+        
         guard let navigationController = topViewController()?.navigationController else {
             return UINavigationController()
         }
@@ -113,7 +134,8 @@ extension PlatformRouter: FlutterBoostDelegate {
         
         let engine = FlutterBoost.instance()?.engine()
         engine?.viewController = nil
-        if let vc = FBFlutterViewContainer() {
+        
+        if let vc = GAFlutterRooterViewController() {
             vc.setName(pageName, uniqueId: uniqueId, params: arguments)
             
             let animated = arguments["animated"] as? Bool ?? true
@@ -124,14 +146,15 @@ extension PlatformRouter: FlutterBoostDelegate {
             } else {
                 navigationController().pushViewController(vc, animated: true)
             }
-            
-            
         }
-        
-        
     }
     
     func popRoute(_ uniqueId: String!) {
+        if uniqueId == "333" {
+            self.navigationController().popViewController(animated: true)
+        } else {
+            self.navigationController().popViewController(animated: true)
+        }
         
     }
     

@@ -21,9 +21,8 @@ class RouterManager: NSObject, UITabBarControllerDelegate {
 
         let router = Router.sharedInstance
         router.navigationController = nav
-        router.map(OneViewController.routableKey, className: OneViewController.description())
 
-//        configureVC()
+        configureVC()
     }
 
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {

@@ -7,7 +7,7 @@
 
 import UIKit
 import SwiftyJSON
-
+import SwiftyColor
 struct Color {
     /// 主题紫（0x8474F4）
     static let themePurple = 0x8474F4.color

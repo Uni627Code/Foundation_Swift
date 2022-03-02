@@ -7,9 +7,7 @@
 
 import UIKit
 
-
-
-class HomeViewController: UIViewController, BindableType {
+class HomeViewController: BaseViewController, BindableType {
         
     var viewModel: HomeViewModel!
     
@@ -34,8 +32,10 @@ class HomeViewController: UIViewController, BindableType {
     }
     
     @objc func skip() {
-        Router.sharedInstance.open("OneViewController", params: RouterParam())
-
+        var params = RouterParam()
+        params["id"] = "id"
+        params["name"] = "name"
+        Router.sharedInstance.open("OneViewController", params: params)
     }
     
     

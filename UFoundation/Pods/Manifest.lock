@@ -1,26 +1,93 @@
 PODS:
-  - Alamofire (5.4.2)
-  - AttributedString (1.6.9)
+  - Alamofire (5.4.4)
+  - AttributedString (2.2.1)
+  - camera (0.0.1):
+    - Flutter
+  - connectivity (0.0.1):
+    - Flutter
+    - Reachability
   - DateToolsSwift (5.0.0)
+  - device_info (0.0.1):
+    - Flutter
+  - DKImagePickerController/Core (4.3.2):
+    - DKImagePickerController/ImageDataManager
+    - DKImagePickerController/Resource
+  - DKImagePickerController/ImageDataManager (4.3.2)
+  - DKImagePickerController/PhotoGallery (4.3.2):
+    - DKImagePickerController/Core
+    - DKPhotoGallery
+  - DKImagePickerController/Resource (4.3.2)
+  - DKPhotoGallery (0.0.17):
+    - DKPhotoGallery/Core (= 0.0.17)
+    - DKPhotoGallery/Model (= 0.0.17)
+    - DKPhotoGallery/Preview (= 0.0.17)
+    - DKPhotoGallery/Resource (= 0.0.17)
+    - SDWebImage
+    - SwiftyGif
+  - DKPhotoGallery/Core (0.0.17):
+    - DKPhotoGallery/Model
+    - DKPhotoGallery/Preview
+    - SDWebImage
+    - SwiftyGif
+  - DKPhotoGallery/Model (0.0.17):
+    - SDWebImage
+    - SwiftyGif
+  - DKPhotoGallery/Preview (0.0.17):
+    - DKPhotoGallery/Model
+    - DKPhotoGallery/Resource
+    - SDWebImage
+    - SwiftyGif
+  - DKPhotoGallery/Resource (0.0.17):
+    - SDWebImage
+    - SwiftyGif
   - dsBridge (3.0.6)
   - EGOCache (2.2.0)
+  - file_picker (0.0.1):
+    - DKImagePickerController/PhotoGallery
+    - Flutter
   - Flutter (1.0.0)
   - flutter_boost (0.0.2):
     - Flutter
   - flutter_module (0.0.1):
     - Flutter
   - FlutterPluginRegistrant (0.0.1):
+    - camera
+    - connectivity
+    - device_info
+    - file_picker
     - Flutter
     - flutter_boost
-  - Instructions (2.0.1)
-  - IQKeyboardManagerSwift (6.5.6)
+    - fluttertoast
+    - image_picker
+    - package_info
+    - path_provider
+    - share
+    - shared_preferences
+    - sqflite
+    - url_launcher
+    - video_player
+    - webview_flutter
+  - fluttertoast (0.0.2):
+    - Flutter
+    - Toast
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - image_picker (0.0.1):
+    - Flutter
+  - Instructions (2.1.0)
+  - IQKeyboardManagerSwift (6.5.9)
   - JPFPSStatus (0.1.1)
   - KeychainAccess (4.2.2)
-  - MJRefresh (3.5.0)
-  - Moya (14.0.0):
-    - Moya/Core (= 14.0.0)
-  - Moya/Core (14.0.0):
+  - MJRefresh (3.7.2)
+  - Moya (15.0.0):
+    - Moya/Core (= 15.0.0)
+  - Moya/Core (15.0.0):
     - Alamofire (~> 5.0)
+  - package_info (0.0.1):
+    - Flutter
+  - path_provider (0.0.1):
+    - Flutter
   - PINCache (3.0.3):
     - PINCache/Arc-exception-safe (= 3.0.3)
     - PINCache/Core (= 3.0.3)
@@ -38,57 +105,85 @@ PODS:
     - PINRemoteImage/Core
   - pop (1.0.12)
   - RAMAnimatedTabBarController (5.2.0)
-  - ReachabilitySwift (5.0.0)
+  - Reachability (3.2)
+  - SDWebImage (5.12.1):
+    - SDWebImage/Core (= 5.12.1)
+  - SDWebImage/Core (5.12.1)
+  - share (0.0.1):
+    - Flutter
+  - shared_preferences (0.0.1):
+    - Flutter
   - SnapKit (5.0.1)
-  - SQLite.swift (0.12.2):
-    - SQLite.swift/standard (= 0.12.2)
-  - SQLite.swift/standard (0.12.2)
+  - sqflite (0.0.2):
+    - Flutter
+    - FMDB (>= 2.7.5)
+  - SQLite.swift (0.13.0):
+    - SQLite.swift/standard (= 0.13.0)
+  - SQLite.swift/standard (0.13.0)
   - SwiftDate (6.3.1)
-  - SwiftLint (0.43.1)
+  - SwiftLint (0.45.0)
   - SwiftyColor (1.2.1)
+  - SwiftyGif (5.4.0)
   - SwiftyImage (1.6.0)
   - SwiftyJSON (5.0.1)
   - SwiftyTimer (2.1.0)
-  - Texture (3.0.0):
-    - Texture/AssetsLibrary (= 3.0.0)
-    - Texture/Core (= 3.0.0)
-    - Texture/MapKit (= 3.0.0)
-    - Texture/Photos (= 3.0.0)
-    - Texture/PINRemoteImage (= 3.0.0)
-    - Texture/Video (= 3.0.0)
-  - Texture/AssetsLibrary (3.0.0):
+  - Texture (3.1.0):
+    - Texture/AssetsLibrary (= 3.1.0)
+    - Texture/Core (= 3.1.0)
+    - Texture/MapKit (= 3.1.0)
+    - Texture/Photos (= 3.1.0)
+    - Texture/PINRemoteImage (= 3.1.0)
+    - Texture/Video (= 3.1.0)
+  - Texture/AssetsLibrary (3.1.0):
     - Texture/Core
-  - Texture/Core (3.0.0)
-  - Texture/MapKit (3.0.0):
+  - Texture/Core (3.1.0)
+  - Texture/MapKit (3.1.0):
     - Texture/Core
-  - Texture/Photos (3.0.0):
+  - Texture/Photos (3.1.0):
     - Texture/Core
-  - Texture/PINRemoteImage (3.0.0):
+  - Texture/PINRemoteImage (3.1.0):
     - PINRemoteImage/iOS (~> 3.0.0)
     - PINRemoteImage/PINCache
     - Texture/Core
-  - Texture/Video (3.0.0):
+  - Texture/Video (3.1.0):
     - Texture/Core
+  - Toast (4.0.0)
+  - url_launcher (0.0.1):
+    - Flutter
+  - video_player (0.0.1):
+    - Flutter
+  - webview_flutter (0.0.1):
+    - Flutter
 
 DEPENDENCIES:
   - AttributedString
+  - camera (from `../flutter_module/.ios/.symlinks/plugins/camera/ios`)
+  - connectivity (from `../flutter_module/.ios/.symlinks/plugins/connectivity/ios`)
   - DateToolsSwift
+  - device_info (from `../flutter_module/.ios/.symlinks/plugins/device_info/ios`)
   - dsBridge
   - EGOCache
+  - file_picker (from `../flutter_module/.ios/.symlinks/plugins/file_picker/ios`)
   - Flutter (from `../flutter_module/.ios/Flutter/engine`)
   - flutter_boost (from `../flutter_module/.ios/.symlinks/plugins/flutter_boost/ios`)
   - flutter_module (from `../flutter_module/.ios/Flutter`)
   - FlutterPluginRegistrant (from `../flutter_module/.ios/Flutter/FlutterPluginRegistrant`)
+  - fluttertoast (from `../flutter_module/.ios/.symlinks/plugins/fluttertoast/ios`)
+  - image_picker (from `../flutter_module/.ios/.symlinks/plugins/image_picker/ios`)
   - Instructions
   - IQKeyboardManagerSwift
   - JPFPSStatus
   - KeychainAccess
   - MJRefresh
   - Moya
+  - package_info (from `../flutter_module/.ios/.symlinks/plugins/package_info/ios`)
+  - path_provider (from `../flutter_module/.ios/.symlinks/plugins/path_provider/ios`)
   - pop
   - RAMAnimatedTabBarController
-  - ReachabilitySwift
+  - share (from `../flutter_module/.ios/.symlinks/plugins/share/ios`)
+  - shared_preferences (from `../flutter_module/.ios/.symlinks/plugins/shared_preferences/ios`)
   - SnapKit
+  - sqflite (from `../flutter_module/.ios/.symlinks/plugins/sqflite/ios`)
   - SQLite.swift
   - SwiftDate
   - SwiftLint
@@ -97,14 +192,20 @@ DEPENDENCIES:
   - SwiftyJSON
   - SwiftyTimer
   - Texture
+  - url_launcher (from `../flutter_module/.ios/.symlinks/plugins/url_launcher/ios`)
+  - video_player (from `../flutter_module/.ios/.symlinks/plugins/video_player/ios`)
+  - webview_flutter (from `../flutter_module/.ios/.symlinks/plugins/webview_flutter/ios`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - AttributedString
     - DateToolsSwift
+    - DKImagePickerController
+    - DKPhotoGallery
     - dsBridge
     - EGOCache
+    - FMDB
     - Instructions
     - IQKeyboardManagerSwift
     - JPFPSStatus
@@ -116,18 +217,29 @@ SPEC REPOS:
     - PINRemoteImage
     - pop
     - RAMAnimatedTabBarController
-    - ReachabilitySwift
+    - Reachability
+    - SDWebImage
     - SnapKit
     - SQLite.swift
     - SwiftDate
     - SwiftLint
     - SwiftyColor
+    - SwiftyGif
     - SwiftyImage
     - SwiftyJSON
     - SwiftyTimer
     - Texture
+    - Toast
 
 EXTERNAL SOURCES:
+  camera:
+    :path: "../flutter_module/.ios/.symlinks/plugins/camera/ios"
+  connectivity:
+    :path: "../flutter_module/.ios/.symlinks/plugins/connectivity/ios"
+  device_info:
+    :path: "../flutter_module/.ios/.symlinks/plugins/device_info/ios"
+  file_picker:
+    :path: "../flutter_module/.ios/.symlinks/plugins/file_picker/ios"
   Flutter:
     :path: "../flutter_module/.ios/Flutter/engine"
   flutter_boost:
@@ -136,39 +248,79 @@ EXTERNAL SOURCES:
     :path: "../flutter_module/.ios/Flutter"
   FlutterPluginRegistrant:
     :path: "../flutter_module/.ios/Flutter/FlutterPluginRegistrant"
+  fluttertoast:
+    :path: "../flutter_module/.ios/.symlinks/plugins/fluttertoast/ios"
+  image_picker:
+    :path: "../flutter_module/.ios/.symlinks/plugins/image_picker/ios"
+  package_info:
+    :path: "../flutter_module/.ios/.symlinks/plugins/package_info/ios"
+  path_provider:
+    :path: "../flutter_module/.ios/.symlinks/plugins/path_provider/ios"
+  share:
+    :path: "../flutter_module/.ios/.symlinks/plugins/share/ios"
+  shared_preferences:
+    :path: "../flutter_module/.ios/.symlinks/plugins/shared_preferences/ios"
+  sqflite:
+    :path: "../flutter_module/.ios/.symlinks/plugins/sqflite/ios"
+  url_launcher:
+    :path: "../flutter_module/.ios/.symlinks/plugins/url_launcher/ios"
+  video_player:
+    :path: "../flutter_module/.ios/.symlinks/plugins/video_player/ios"
+  webview_flutter:
+    :path: "../flutter_module/.ios/.symlinks/plugins/webview_flutter/ios"
 
 SPEC CHECKSUMS:
-  Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
-  AttributedString: 46224811c2a7297af9c5b0b946e2306796d9333a
+  Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  AttributedString: 5d92c133226b792566a4b4e2a5bdc0c9e12ee2b5
+  camera: a0ca5080336f7af47b88436e5e26da3dee5568f0
+  connectivity: c4130b2985d4ef6fd26f9702e886bd5260681467
   DateToolsSwift: 4207ada6ad615d8dc076323d27037c94916dbfa6
+  device_info: d7d233b645a32c40dfdc212de5cf646ca482f175
+  DKImagePickerController: b5eb7f7a388e4643264105d648d01f727110fc3d
+  DKPhotoGallery: fdfad5125a9fdda9cc57df834d49df790dbb4179
   dsBridge: 48b62ee8a411ad601a88d6f6c8cf6cb634b206b7
   EGOCache: 191fd213da6804d487b49b1a91772ba904f3e324
+  file_picker: 3e6c3790de664ccf9b882732d9db5eaf6b8d4eb1
   Flutter: ac41d61a47ae5bf8195a5598d2d63754888ec0d5
   flutter_boost: d3e480158af541c70fd8b96e5b1de1fca5bc14ba
   flutter_module: d1e1ff44505640bd9aa37f23f63380c646272be4
-  FlutterPluginRegistrant: 03a06fa5f754c611bb6c96f42acf9432e8c4515d
-  Instructions: dd428e3776fcdcec18bf4242b9d3fb2d1cbd6cc9
-  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  FlutterPluginRegistrant: a9f0dc7d69560354b0aeefcb89ea1c9fd3c4fba1
+  fluttertoast: 6122fa75143e992b1d3470f61000f591a798cc58
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  image_picker: 66aa71bc96850a90590a35d4c4a2907b0d823109
+  Instructions: 2465e321dde23f7c8fc26fe8efddf605df80dfba
+  IQKeyboardManagerSwift: 6e839c575c4aa1078d58a596e41244e77abe918f
   JPFPSStatus: 03f32aa3d4d7d0c5bf56f6f3e7cf8b7280a5f52c
   KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
-  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
-  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  MJRefresh: 30997d30b347c8e9508a4db11e3a690da0c9b85a
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  package_info: 873975fc26034f0b863a300ad47e7f1ac6c7ec62
+  path_provider: abfe2b5c733d04e238b0d8691db0cfd63a27a93c
   PINCache: 7a8fc1a691173d21dbddbf86cd515de6efa55086
   PINOperation: 00c935935f1e8cf0d1e2d6b542e75b88fc3e5e20
   PINRemoteImage: f1295b29f8c5e640e25335a1b2bd9d805171bd01
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   RAMAnimatedTabBarController: 6863a386e7ae2ab227cd60aa73ab8ff56cdacfdd
-  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  SDWebImage: 4dc3e42d9ec0c1028b960a33ac6b637bb432207b
+  share: 0b2c3e82132f5888bccca3351c504d0003b3b410
+  shared_preferences: af6bfa751691cdc24be3045c43ec037377ada40d
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
-  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
+  sqflite: 6d358c025f5b867b29ed92fc697fd34924e11904
+  SQLite.swift: 8add701609fd0ef78d097dcc75d20a9782e6f5fc
   SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
-  SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
+  SwiftLint: e5c7f1fba68eccfc51509d5b2ce1699f5502e0c7
   SwiftyColor: a2f468071c1b96be1ba41a0be7cf70d645cd7dcc
+  SwiftyGif: 5d4af95df24caf1c570dbbcb32a3b8a0763bc6d7
   SwiftyImage: 65c71a147f417fc0fe137d17b135aaa666279a09
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   SwiftyTimer: 02dd6cf10cbc71cbf67cec494f6e5eb782102543
-  Texture: 2f109e937850d94d1d07232041c9c7313ccddb81
+  Texture: 2e8ab2519452515f7f5a520f5a8f7e0a413abfa3
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+  url_launcher: 6fef411d543ceb26efce54b05a0a40bfd74cbbef
+  video_player: 9cc823b1d9da7e8427ee591e8438bfbcde500e6e
+  webview_flutter: 9f491a9b5a66f2573946a389b2677987b0ff8c0b
 
-PODFILE CHECKSUM: 77ae635cea5a06302f48f1cafb7538b90c3384ab
+PODFILE CHECKSUM: 56dc17f5d96ed449bfd7e489fca8d6ed48253499
 
 COCOAPODS: 1.10.1

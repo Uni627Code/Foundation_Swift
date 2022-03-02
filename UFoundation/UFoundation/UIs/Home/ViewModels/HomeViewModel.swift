@@ -6,7 +6,20 @@
 //
 
 import UIKit
-
+ 
 class HomeViewModel: NSObject {
 
+    var id: String?
+    
+    var name: String?
+    
+    
+    @objc func sendMessage(_ message: String) {
+        NSLog("发送的消息是 = %@", message)
+        
+    
+    }
+    
+    
 }
+

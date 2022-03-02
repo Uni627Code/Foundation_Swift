@@ -19,7 +19,7 @@ class OneViewController: UIViewController, BindableType {
     }
 
     func bindViewModel() {
-        
+        print(viewModel.id)
     }
 
 }
@@ -31,9 +31,17 @@ extension OneViewController: Routable {
     /// - Parameter params: 参数
     /// - Returns: 返回控制器
     static func initWithParams(_ params: RouterParam?) -> UIViewController? {
+        let model = HomeViewModel()
+        if let params = params {
+            if let id = params["id"] as? String, let name = params["name"] as? String {
+                model.id = id
+                model.name = name
+            }
+        }
         var vc = OneViewController()
-        vc.bind(to: HomeViewModel())
+        vc.bind(to: model)
         return vc
+        
     }
     
     static var routableKey: String {
