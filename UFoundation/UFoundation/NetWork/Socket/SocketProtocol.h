@@ -12,6 +12,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol SocketProtocol <NSObject>
 
+
+/// 协议方法
+- (void) protocolMethod;
+
+
+/// 协议属性
+@property (nonatomic, strong) NSString *protocolName;
+
 @end
 
 NS_ASSUME_NONNULL_END

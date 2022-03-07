@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SocketManager (Category)
 
+@property (nonatomic, strong) NSString *categoryName;
+
+- (void)categoryMethod;
+
 @end
 
 NS_ASSUME_NONNULL_END

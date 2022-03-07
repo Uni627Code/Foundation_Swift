@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SocketManager ()
 
+- (void) extenMethod;
+
+@property (nonatomic, strong) NSString *extenName;
+
 @end
 
 NS_ASSUME_NONNULL_END

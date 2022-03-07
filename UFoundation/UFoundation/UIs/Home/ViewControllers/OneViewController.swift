@@ -19,10 +19,26 @@ class OneViewController: UIViewController, BindableType {
     }
 
     func bindViewModel() {
-        print(viewModel.id)
+           
+        let request = AFPersonRequest()
+        
+        AlamofireManager.share.send(request) { array in
+            if let model = array.list.first {
+                print(model)
+            }
+            
+        } failure: { error in
+            
+            
+        }
+
     }
 
+   
 }
+
+
+
 
 
 extension OneViewController: Routable {

@@ -7,7 +7,24 @@
 //
 
 #import "SocketManager+Category.h"
+#import <objc/runtime.h>
+
+const NSString *socketKey;
 
 @implementation SocketManager (Category)
+
+
+- (void)setCategoryName:(NSString *)categoryName {
+    objc_setAssociatedObject(self, &socketKey, categoryName,OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (NSString *)categoryName {
+    
+    return  objc_getAssociatedObject(self, &socketKey);
+}
+
+- (void)categoryMethod {
+    
+}
 
 @end

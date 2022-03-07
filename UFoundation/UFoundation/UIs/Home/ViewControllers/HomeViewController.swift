@@ -28,7 +28,6 @@ class HomeViewController: BaseViewController, BindableType {
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview()
         }
-        
     }
     
     @objc func skip() {

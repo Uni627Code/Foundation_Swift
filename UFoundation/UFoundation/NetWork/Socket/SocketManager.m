@@ -8,6 +8,19 @@
 
 #import "SocketManager.h"
 
-@implementation SocketManager
+@interface SocketManager ()<SocketProtocol>
 
 @end
+
+@implementation SocketManager
+
+@synthesize protocolName;
+
+- (void)protocolMethod {
+    [_delegate protocolMethod];
+}
+
+
+
+@end
+

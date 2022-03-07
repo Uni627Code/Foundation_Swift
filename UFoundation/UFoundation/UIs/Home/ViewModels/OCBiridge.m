@@ -9,6 +9,8 @@
 #import "Person.h"
 #import <objc/message.h>
 
+#import "SocketManager.h"
+#import "SocketManager+Category.h"
 
 @implementation OCBiridge
 
@@ -18,7 +20,8 @@
     
     ((void (*) (id, SEL, id))objc_msgSend)([Person new], @selector(sendMessage:), @"login");
 
-    
+    SocketManager *manager = [[SocketManager alloc] init];
+    [manager categoryMethod];
 }
 
 

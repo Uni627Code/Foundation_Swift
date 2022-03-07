@@ -38,9 +38,20 @@
 		E55FE66C2ADED84806720AC4 /* Pods_UFoundation_UFoundationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6315F76E965D00634B496BF1 /* Pods_UFoundation_UFoundationUITests.framework */; };
 		F514D1722643CA9B00B70280 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F514D1712643CA9B00B70280 /* HomeViewModel.swift */; };
 		F514D1772643CF9E00B70280 /* OneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F514D1762643CF9E00B70280 /* OneViewController.swift */; };
-		F550B3872711655B00F7EC32 /* MpassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F550B3862711655B00F7EC32 /* MpassViewController.m */; };
+		F543D1C527D5B44B00F8F65E /* SocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F543D1C427D5B44B00F8F65E /* SocketManager.m */; };
+		F543D1C727D5B4EA00F8F65E /* 网络层概念.txt in Resources */ = {isa = PBXBuildFile; fileRef = F543D1C627D5B4EA00F8F65E /* 网络层概念.txt */; };
+		F543D1CC27D5B8AD00F8F65E /* Socket本质.png in Resources */ = {isa = PBXBuildFile; fileRef = F543D1CB27D5B8AD00F8F65E /* Socket本质.png */; };
+		F543D1D127D5F4CD00F8F65E /* SocketManager+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = F543D1D027D5F4CD00F8F65E /* SocketManager+Category.m */; };
+		F564E22927CF7B320046D415 /* ServiceProtocl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F564E22827CF7B320046D415 /* ServiceProtocl.swift */; };
+		F564E22D27CF89EE0046D415 /* MpassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F564E22B27CF89EE0046D415 /* MpassViewController.m */; };
 		F5655758279183FF00090D21 /* CLCoreUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5655757279183FF00090D21 /* CLCoreUtility.swift */; };
 		F57BB10127BCDB220070473A /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57BB10027BCDB220070473A /* UIViewControllerExtension.swift */; };
+		F5872A8527CFB5DB001D7B09 /* LGPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5872A8427CFB5DB001D7B09 /* LGPerson.swift */; };
+		F58AB97C27D1D1DC0034D67D /* ConfigRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58AB97B27D1D1DC0034D67D /* ConfigRequest.swift */; };
+		F58AB97E27D1D3C80034D67D /* EServicesConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58AB97D27D1D3C80034D67D /* EServicesConfig.swift */; };
+		F58AB98027D1D4100034D67D /* LGCommonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58AB97F27D1D4100034D67D /* LGCommonProtocol.swift */; };
+		F58B3C3B27D0C8E800DC2F7B /* AlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B3C3A27D0C8E800DC2F7B /* AlamofireManager.swift */; };
+		F58B3C3E27D0CFF000DC2F7B /* LGDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B3C3D27D0CFF000DC2F7B /* LGDecodable.swift */; };
 		F58EC6F8273A407300E6803D /* OCBiridge.m in Sources */ = {isa = PBXBuildFile; fileRef = F58EC6F7273A407300E6803D /* OCBiridge.m */; };
 		F58EC6FE273A52E100E6803D /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = F58EC6FD273A52E100E6803D /* Person.m */; };
 		F58EC704273A5F2F00E6803D /* UITableView+LG.m in Sources */ = {isa = PBXBuildFile; fileRef = F58EC703273A5F2F00E6803D /* UITableView+LG.m */; };
@@ -48,6 +59,9 @@
 		F597292C265BA03D0054FBFD /* PlatformRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5972929265BA03D0054FBFD /* PlatformRouter.swift */; };
 		F597292D265BA03D0054FBFD /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F597292A265BA03D0054FBFD /* SecondViewController.swift */; };
 		F5972BA0265DE6880054FBFD /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5972B9F265DE6880054FBFD /* UIViewExtension.swift */; };
+		F5A1391327D1031500978425 /* AFPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A1391227D1031500978425 /* AFPerson.swift */; };
+		F5A1391527D10C1A00978425 /* ConfigAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A1391427D10C1A00978425 /* ConfigAPI.swift */; };
+		F5A1391727D1156300978425 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A1391627D1156200978425 /* ErrorModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,11 +137,26 @@
 		DFC19D0948266A5C1D5D1F73 /* Pods-UFoundation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFoundation.release.xcconfig"; path = "Target Support Files/Pods-UFoundation/Pods-UFoundation.release.xcconfig"; sourceTree = "<group>"; };
 		F514D1712643CA9B00B70280 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		F514D1762643CF9E00B70280 /* OneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneViewController.swift; sourceTree = "<group>"; };
-		F550B3842711655B00F7EC32 /* UFoundation-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UFoundation-Bridging-Header.h"; sourceTree = "<group>"; };
-		F550B3852711655B00F7EC32 /* MpassViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MpassViewController.h; sourceTree = "<group>"; };
-		F550B3862711655B00F7EC32 /* MpassViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MpassViewController.m; sourceTree = "<group>"; };
+		F543D1C327D5B44B00F8F65E /* SocketManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocketManager.h; sourceTree = "<group>"; };
+		F543D1C427D5B44B00F8F65E /* SocketManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocketManager.m; sourceTree = "<group>"; };
+		F543D1C627D5B4EA00F8F65E /* 网络层概念.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "网络层概念.txt"; sourceTree = "<group>"; };
+		F543D1CB27D5B8AD00F8F65E /* Socket本质.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Socket本质.png"; sourceTree = "<group>"; };
+		F543D1CD27D5F48800F8F65E /* SocketProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocketProtocol.h; sourceTree = "<group>"; };
+		F543D1CE27D5F4B300F8F65E /* SocketManager+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SocketManager+Extension.h"; sourceTree = "<group>"; };
+		F543D1CF27D5F4CD00F8F65E /* SocketManager+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SocketManager+Category.h"; sourceTree = "<group>"; };
+		F543D1D027D5F4CD00F8F65E /* SocketManager+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SocketManager+Category.m"; sourceTree = "<group>"; };
+		F564E22827CF7B320046D415 /* ServiceProtocl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocl.swift; sourceTree = "<group>"; };
+		F564E22A27CF89EE0046D415 /* MpassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MpassViewController.h; sourceTree = "<group>"; };
+		F564E22B27CF89EE0046D415 /* MpassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MpassViewController.m; sourceTree = "<group>"; };
+		F564E22C27CF89EE0046D415 /* UFoundation-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UFoundation-Bridging-Header.h"; sourceTree = "<group>"; };
 		F5655757279183FF00090D21 /* CLCoreUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLCoreUtility.swift; sourceTree = "<group>"; };
 		F57BB10027BCDB220070473A /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		F5872A8427CFB5DB001D7B09 /* LGPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGPerson.swift; sourceTree = "<group>"; };
+		F58AB97B27D1D1DC0034D67D /* ConfigRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigRequest.swift; sourceTree = "<group>"; };
+		F58AB97D27D1D3C80034D67D /* EServicesConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EServicesConfig.swift; sourceTree = "<group>"; };
+		F58AB97F27D1D4100034D67D /* LGCommonProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGCommonProtocol.swift; sourceTree = "<group>"; };
+		F58B3C3A27D0C8E800DC2F7B /* AlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireManager.swift; sourceTree = "<group>"; };
+		F58B3C3D27D0CFF000DC2F7B /* LGDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGDecodable.swift; sourceTree = "<group>"; };
 		F58EC6F6273A407300E6803D /* OCBiridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCBiridge.h; sourceTree = "<group>"; };
 		F58EC6F7273A407300E6803D /* OCBiridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCBiridge.m; sourceTree = "<group>"; };
 		F58EC6FC273A52E100E6803D /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
@@ -138,6 +167,9 @@
 		F5972929265BA03D0054FBFD /* PlatformRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatformRouter.swift; sourceTree = "<group>"; };
 		F597292A265BA03D0054FBFD /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		F5972B9F265DE6880054FBFD /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		F5A1391227D1031500978425 /* AFPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFPerson.swift; sourceTree = "<group>"; };
+		F5A1391427D10C1A00978425 /* ConfigAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigAPI.swift; sourceTree = "<group>"; };
+		F5A1391627D1156200978425 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +248,7 @@
 		953D1B60262D24FE006C0147 /* UFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				F564E22727CF7A8D0046D415 /* NetWork */,
 				953D1C06262D624C006C0147 /* Utils */,
 				953D1BBD262D52D4006C0147 /* AppMacro */,
 				953D1BB6262D52D4006C0147 /* Common */,
@@ -254,9 +287,9 @@
 		953D1BAD262D52D3006C0147 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				F550B3852711655B00F7EC32 /* MpassViewController.h */,
-				F550B3862711655B00F7EC32 /* MpassViewController.m */,
-				F550B3842711655B00F7EC32 /* UFoundation-Bridging-Header.h */,
+				F564E22A27CF89EE0046D415 /* MpassViewController.h */,
+				F564E22B27CF89EE0046D415 /* MpassViewController.m */,
+				F564E22C27CF89EE0046D415 /* UFoundation-Bridging-Header.h */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -299,6 +332,8 @@
 		953D1BB1262D52D4006C0147 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F5872A8427CFB5DB001D7B09 /* LGPerson.swift */,
+				F5A1391227D1031500978425 /* AFPerson.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -399,6 +434,7 @@
 		953D1BBD262D52D4006C0147 /* AppMacro */ = {
 			isa = PBXGroup;
 			children = (
+				F5A1391427D10C1A00978425 /* ConfigAPI.swift */,
 			);
 			path = AppMacro;
 			sourceTree = "<group>";
@@ -574,6 +610,40 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		F543D1C227D5B3F100F8F65E /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				F543D1CA27D5B8AD00F8F65E /* Resources */,
+				F543D1C627D5B4EA00F8F65E /* 网络层概念.txt */,
+				F543D1C327D5B44B00F8F65E /* SocketManager.h */,
+				F543D1C427D5B44B00F8F65E /* SocketManager.m */,
+				F543D1CD27D5F48800F8F65E /* SocketProtocol.h */,
+				F543D1CE27D5F4B300F8F65E /* SocketManager+Extension.h */,
+				F543D1CF27D5F4CD00F8F65E /* SocketManager+Category.h */,
+				F543D1D027D5F4CD00F8F65E /* SocketManager+Category.m */,
+			);
+			path = Socket;
+			sourceTree = "<group>";
+		};
+		F543D1CA27D5B8AD00F8F65E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F543D1CB27D5B8AD00F8F65E /* Socket本质.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F564E22727CF7A8D0046D415 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				F543D1C227D5B3F100F8F65E /* Socket */,
+				F58B3C3C27D0CFD700DC2F7B /* Common */,
+				F564E22827CF7B320046D415 /* ServiceProtocl.swift */,
+				F58B3C3A27D0C8E800DC2F7B /* AlamofireManager.swift */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
 		F5655743279176FB00090D21 /* BaseController */ = {
 			isa = PBXGroup;
 			children = (
@@ -588,6 +658,18 @@
 				F5655757279183FF00090D21 /* CLCoreUtility.swift */,
 			);
 			path = CLCoreUtility;
+			sourceTree = "<group>";
+		};
+		F58B3C3C27D0CFD700DC2F7B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F58B3C3D27D0CFF000DC2F7B /* LGDecodable.swift */,
+				F58AB97F27D1D4100034D67D /* LGCommonProtocol.swift */,
+				F5A1391627D1156200978425 /* ErrorModel.swift */,
+				F58AB97B27D1D1DC0034D67D /* ConfigRequest.swift */,
+				F58AB97D27D1D3C80034D67D /* EServicesConfig.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		F5972927265BA03D0054FBFD /* Flutter */ = {
@@ -713,6 +795,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				953D1B6E262D2502006C0147 /* LaunchScreen.storyboard in Resources */,
+				F543D1CC27D5B8AD00F8F65E /* Socket本质.png in Resources */,
+				F543D1C727D5B4EA00F8F65E /* 网络层概念.txt in Resources */,
 				953D1B6B262D2502006C0147 /* Assets.xcassets in Resources */,
 				953D1B69262D24FE006C0147 /* Main.storyboard in Resources */,
 			);
@@ -852,11 +936,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5A1391527D10C1A00978425 /* ConfigAPI.swift in Sources */,
 				953D1DC1262D7F16006C0147 /* Router.swift in Sources */,
 				F514D1722643CA9B00B70280 /* HomeViewModel.swift in Sources */,
 				953D1E18262D927D006C0147 /* VueViewController.swift in Sources */,
+				F564E22927CF7B320046D415 /* ServiceProtocl.swift in Sources */,
+				F58AB98027D1D4100034D67D /* LGCommonProtocol.swift in Sources */,
+				F543D1C527D5B44B00F8F65E /* SocketManager.m in Sources */,
+				F543D1D127D5F4CD00F8F65E /* SocketManager+Category.m in Sources */,
 				953D1E13262D926A006C0147 /* FlutterViewController.swift in Sources */,
 				953D1C0C262D626F006C0147 /* PrintLog.swift in Sources */,
+				F58AB97E27D1D3C80034D67D /* EServicesConfig.swift in Sources */,
 				953D1DF7262D8E11006C0147 /* ERefresh.swift in Sources */,
 				F597292D265BA03D0054FBFD /* SecondViewController.swift in Sources */,
 				F597292B265BA03D0054FBFD /* GAFlutterRooterViewController.swift in Sources */,
@@ -866,22 +956,28 @@
 				953D1E0B262D9252006C0147 /* HomeViewController.swift in Sources */,
 				F58EC6FE273A52E100E6803D /* Person.m in Sources */,
 				953D1DE8262D8502006C0147 /* MainTabbarViewController.swift in Sources */,
+				F5A1391327D1031500978425 /* AFPerson.swift in Sources */,
 				953D1C11262D6300006C0147 /* RuntimeTool.swift in Sources */,
 				953D1C49262D703C006C0147 /* NSObject+Extension.swift in Sources */,
 				F5972BA0265DE6880054FBFD /* UIViewExtension.swift in Sources */,
 				953D1DF2262D8AE7006C0147 /* UIScrollView+Extension.swift in Sources */,
 				953D1C1B262D6887006C0147 /* Color.swift in Sources */,
 				953D1D15262D73A9006C0147 /* BindableType.swift in Sources */,
+				F564E22D27CF89EE0046D415 /* MpassViewController.m in Sources */,
 				F57BB10127BCDB220070473A /* UIViewControllerExtension.swift in Sources */,
-				F550B3872711655B00F7EC32 /* MpassViewController.m in Sources */,
 				953D1C16262D664F006C0147 /* Font.swift in Sources */,
+				F58AB97C27D1D1DC0034D67D /* ConfigRequest.swift in Sources */,
 				953D1B66262D24FE006C0147 /* ViewController.swift in Sources */,
 				953D1E1D262D928C006C0147 /* OtherViewController.swift in Sources */,
 				953D1C43262D6F76006C0147 /* BaseViewController.swift in Sources */,
 				F597292C265BA03D0054FBFD /* PlatformRouter.swift in Sources */,
+				F5A1391727D1156300978425 /* ErrorModel.swift in Sources */,
 				F5655758279183FF00090D21 /* CLCoreUtility.swift in Sources */,
+				F58B3C3E27D0CFF000DC2F7B /* LGDecodable.swift in Sources */,
+				F5872A8527CFB5DB001D7B09 /* LGPerson.swift in Sources */,
 				953D1D81262D7B5D006C0147 /* ViewModelType.swift in Sources */,
 				953D1DDE262D834C006C0147 /* RouterManager.swift in Sources */,
+				F58B3C3B27D0C8E800DC2F7B /* AlamofireManager.swift in Sources */,
 				F58EC704273A5F2F00E6803D /* UITableView+LG.m in Sources */,
 				F58EC6F8273A407300E6803D /* OCBiridge.m in Sources */,
 				953D1B62262D24FE006C0147 /* AppDelegate.swift in Sources */,

@@ -76,3 +76,5 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+UFoundation/Pods/.DS_Store
+UFoundation/UFoundation/Resource/.DS_Store

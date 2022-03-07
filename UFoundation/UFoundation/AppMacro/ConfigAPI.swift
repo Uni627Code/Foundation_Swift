@@ -8,6 +8,16 @@
 
 import UIKit
 
-class ConfigAPI: NSObject {
+
+
+let config = ConfigAPI.instance
+
+
+class ConfigAPI {
+    
+    static let instance = ConfigAPI()
+    
+    let host = "https://testbms.einyun.com/"
+        
 
 }
