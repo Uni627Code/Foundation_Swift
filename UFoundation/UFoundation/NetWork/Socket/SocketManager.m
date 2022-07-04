@@ -20,7 +20,5 @@
     [_delegate protocolMethod];
 }
 
-
-
 @end
 

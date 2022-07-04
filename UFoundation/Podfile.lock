@@ -9,6 +9,7 @@ PODS:
   - DateToolsSwift (5.0.0)
   - device_info (0.0.1):
     - Flutter
+  - Differentiator (5.0.0)
   - DKImagePickerController/Core (4.3.2):
     - DKImagePickerController/ImageDataManager
     - DKImagePickerController/Resource
@@ -106,9 +107,23 @@ PODS:
   - pop (1.0.12)
   - RAMAnimatedTabBarController (5.2.0)
   - Reachability (3.2)
-  - SDWebImage (5.12.1):
-    - SDWebImage/Core (= 5.12.1)
-  - SDWebImage/Core (5.12.1)
+  - RxBlocking (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxDataSources (5.0.0):
+    - Differentiator (~> 5.0)
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
+  - RxTest (6.5.0):
+    - RxSwift (= 6.5.0)
+  - SDWebImage (5.12.3):
+    - SDWebImage/Core (= 5.12.3)
+  - SDWebImage/Core (5.12.3)
   - share (0.0.1):
     - Flutter
   - shared_preferences (0.0.1):
@@ -123,7 +138,7 @@ PODS:
   - SwiftDate (6.3.1)
   - SwiftLint (0.45.0)
   - SwiftyColor (1.2.1)
-  - SwiftyGif (5.4.0)
+  - SwiftyGif (5.4.3)
   - SwiftyImage (1.6.0)
   - SwiftyJSON (5.0.1)
   - SwiftyTimer (2.1.0)
@@ -180,6 +195,11 @@ DEPENDENCIES:
   - path_provider (from `../flutter_module/.ios/.symlinks/plugins/path_provider/ios`)
   - pop
   - RAMAnimatedTabBarController
+  - RxBlocking
+  - RxCocoa
+  - RxDataSources
+  - RxSwift
+  - RxTest
   - share (from `../flutter_module/.ios/.symlinks/plugins/share/ios`)
   - shared_preferences (from `../flutter_module/.ios/.symlinks/plugins/shared_preferences/ios`)
   - SnapKit
@@ -201,6 +221,7 @@ SPEC REPOS:
     - Alamofire
     - AttributedString
     - DateToolsSwift
+    - Differentiator
     - DKImagePickerController
     - DKPhotoGallery
     - dsBridge
@@ -218,6 +239,12 @@ SPEC REPOS:
     - pop
     - RAMAnimatedTabBarController
     - Reachability
+    - RxBlocking
+    - RxCocoa
+    - RxDataSources
+    - RxRelay
+    - RxSwift
+    - RxTest
     - SDWebImage
     - SnapKit
     - SQLite.swift
@@ -276,13 +303,14 @@ SPEC CHECKSUMS:
   connectivity: c4130b2985d4ef6fd26f9702e886bd5260681467
   DateToolsSwift: 4207ada6ad615d8dc076323d27037c94916dbfa6
   device_info: d7d233b645a32c40dfdc212de5cf646ca482f175
+  Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
   DKImagePickerController: b5eb7f7a388e4643264105d648d01f727110fc3d
   DKPhotoGallery: fdfad5125a9fdda9cc57df834d49df790dbb4179
   dsBridge: 48b62ee8a411ad601a88d6f6c8cf6cb634b206b7
   EGOCache: 191fd213da6804d487b49b1a91772ba904f3e324
   file_picker: 3e6c3790de664ccf9b882732d9db5eaf6b8d4eb1
-  Flutter: ac41d61a47ae5bf8195a5598d2d63754888ec0d5
-  flutter_boost: d3e480158af541c70fd8b96e5b1de1fca5bc14ba
+  Flutter: bdfa2e8fe0e2880a2c6a58a0b1a8675c262a07af
+  flutter_boost: 6a73c54e5654df180c2cc379045b8cba9746fc8a
   flutter_module: d1e1ff44505640bd9aa37f23f63380c646272be4
   FlutterPluginRegistrant: a9f0dc7d69560354b0aeefcb89ea1c9fd3c4fba1
   fluttertoast: 6122fa75143e992b1d3470f61000f591a798cc58
@@ -302,7 +330,13 @@ SPEC CHECKSUMS:
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   RAMAnimatedTabBarController: 6863a386e7ae2ab227cd60aa73ab8ff56cdacfdd
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
-  SDWebImage: 4dc3e42d9ec0c1028b960a33ac6b637bb432207b
+  RxBlocking: 04b5fd28bb5ea49f7d64b80db8bbfe50d9cc1c7d
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  RxTest: eb2d23adefc5a5ebf5779c7792fa3edfe6ebcc17
+  SDWebImage: 53179a2dba77246efa8a9b85f5c5b21f8f43e38f
   share: 0b2c3e82132f5888bccca3351c504d0003b3b410
   shared_preferences: af6bfa751691cdc24be3045c43ec037377ada40d
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
@@ -311,7 +345,7 @@ SPEC CHECKSUMS:
   SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
   SwiftLint: e5c7f1fba68eccfc51509d5b2ce1699f5502e0c7
   SwiftyColor: a2f468071c1b96be1ba41a0be7cf70d645cd7dcc
-  SwiftyGif: 5d4af95df24caf1c570dbbcb32a3b8a0763bc6d7
+  SwiftyGif: 6c3eafd0ce693cad58bb63d2b2fb9bacb8552780
   SwiftyImage: 65c71a147f417fc0fe137d17b135aaa666279a09
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   SwiftyTimer: 02dd6cf10cbc71cbf67cec494f6e5eb782102543
@@ -321,6 +355,6 @@ SPEC CHECKSUMS:
   video_player: 9cc823b1d9da7e8427ee591e8438bfbcde500e6e
   webview_flutter: 9f491a9b5a66f2573946a389b2677987b0ff8c0b
 
-PODFILE CHECKSUM: 56dc17f5d96ed449bfd7e489fca8d6ed48253499
+PODFILE CHECKSUM: 1f2845b09f589398a7fb8bcfdecd1e3e5caf10ef
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2

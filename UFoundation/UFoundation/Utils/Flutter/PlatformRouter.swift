@@ -13,7 +13,6 @@ import Flutter
 
 class PlatformRouter: NSObject {
     
-    
     ///用来存返回flutter侧返回结果的表
     var resultTable:Dictionary<String,([AnyHashable:Any]?)->Void> = [:];
     
@@ -61,7 +60,7 @@ class PlatformRouter: NSObject {
         }
                 
         if let vc = GAFlutterRooterViewController() {
-            vc.setName(url, uniqueId: "333", params: urlParams)
+            vc.setName(url, uniqueId: "333", params: urlParams, opaque: true)
             navigationController().pushViewController(vc, animated: animated)
         }
         completion(true)
@@ -81,7 +80,7 @@ class PlatformRouter: NSObject {
             if exts["animated"] != nil {
                 animated = exts["animated"] as! Bool
             }
-            vc.setName(url, uniqueId: "222", params: urlParams)
+            vc.setName(url, uniqueId: "222", params: urlParams, opaque: true)
             navigationController().present(vc, animated: animated) {
                 completion(true)
             }
@@ -124,23 +123,31 @@ class PlatformRouter: NSObject {
 
 
 extension PlatformRouter: FlutterBoostDelegate {
-    
-    func pushNativeRoute(_ pageName: String!, arguments: [AnyHashable : Any]!) {
-        
+    func pushFlutterRoute(_ options: FlutterBoostRouteOptions!) {
         
     }
     
-    func pushFlutterRoute(_ pageName: String!, uniqueId: String!, arguments: [AnyHashable : Any]!, completion: ((Bool) -> Void)!) {
+    func popRoute(_ options: FlutterBoostRouteOptions!) {
         
+    }
+    
+
+    func pushNativeRoute(_ pageName: String!, arguments: [AnyHashable : Any]!) {
+
+
+    }
+
+    func pushFlutterRoute(_ pageName: String!, uniqueId: String!, arguments: [AnyHashable : Any]!, completion: ((Bool) -> Void)!) {
+
         let engine = FlutterBoost.instance()?.engine()
         engine?.viewController = nil
-        
+
         if let vc = GAFlutterRooterViewController() {
-            vc.setName(pageName, uniqueId: uniqueId, params: arguments)
-            
+            vc.setName(pageName, uniqueId: uniqueId, params: arguments, opaque: true)
+
             let animated = arguments["animated"] as? Bool ?? true
             let present = arguments["present"] as? Bool ?? false
-            
+
             if present {
                 navigationController().present(vc, animated: animated, completion: nil)
             } else {
@@ -148,15 +155,15 @@ extension PlatformRouter: FlutterBoostDelegate {
             }
         }
     }
-    
+
     func popRoute(_ uniqueId: String!) {
         if uniqueId == "333" {
             self.navigationController().popViewController(animated: true)
         } else {
             self.navigationController().popViewController(animated: true)
         }
-        
+
     }
-    
-    
+
+
 }

@@ -20,7 +20,7 @@
     "Classes/FlutterBoostPlugin.h",
     "Classes/container/FBFlutterViewContainer.h",
     "Classes/container/FBFlutterContainer.h",
-    "Classes/FlutterBoostOptions.h",
+    "Classes/Options.h",
     "Classes/messages.h"
   ],
   "dependencies": {
@@ -29,11 +29,11 @@
     ]
   },
   "libraries": "c++",
-  "xcconfig": {
+  "pod_target_xcconfig": {
     "CLANG_CXX_LANGUAGE_STANDARD": "c++11",
     "CLANG_CXX_LIBRARY": "libc++"
   },
   "platforms": {
-    "ios": "9.0"
+    "ios": "8.0"
   }
 }

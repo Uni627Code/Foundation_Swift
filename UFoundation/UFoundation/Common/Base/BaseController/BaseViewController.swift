@@ -26,9 +26,9 @@ class BaseViewController: UIViewController {
         setupUI()
         setupConstraints()
 
-        
-        getMethodList()
-        getVarList()
+        PrintLog.info("即将进入的页面：\(self.className)")
+//        getMethodList()
+//        getVarList()
     }
 
     deinit {
@@ -159,7 +159,7 @@ extension BaseViewController {
 //            sendMessage("快速转发")
         }
         
-        return [super .forwardingTarget(for: aSelector)]
+        return super.forwardingTarget(for: aSelector)
     }
     
     
@@ -232,15 +232,3 @@ extension BaseViewController {
     
 }
 
-extension BaseViewController {
-    
-    
-    func aa() {
-            
-        method(for: Selector("aa"))
-        
-        
-
-    }
-    
-}

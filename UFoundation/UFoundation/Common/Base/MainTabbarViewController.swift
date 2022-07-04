@@ -26,10 +26,15 @@ class MainTabbarViewController: UITabBarController {
         
 //        self.tabBar.shadowImage = UIImage()
         self.tabBar.backgroundImage = UIImage()
-        
-//        let TabBarLine = UITabBar.appearance()
-//        TabBarLine.shadowImage = UIImage()
-//        TabBarLine.backgroundImage = UIImage()
+       
+        if #available(iOS 15, *) {
+            let appearance = UITabBarAppearance()
+            let effectView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+
+            appearance.backgroundImage = UIImage()
+            self.tabBar.scrollEdgeAppearance = appearance;
+        }
+
         
         setupUI()
     }

@@ -14,7 +14,8 @@ struct PrintLog {
                      method: String = #function,
                      line: Int = #line)
     {
-        #if Dev || AdHoc
+//        #if Dev || AdHoc
+        #if DEBUG
         print("\u{1f600}\u{1f600}\u{1f600}\((file as NSString).lastPathComponent)[\(line)], \(method): \n\u{1f42c}\u{1f42c}\n\(message)\n\u{1f433}\u{1f433}")
         #endif
     }

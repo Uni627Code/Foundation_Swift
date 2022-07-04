@@ -12,7 +12,7 @@ import Alamofire
 
 
 
-extension LGPersonArray: LGDecodable {
+extension LGPersonArray: HttpDecodable {
     
     static func parse(json: Any) -> LGPersonArray? {
         if let json = json as? JSON {

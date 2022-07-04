@@ -14,7 +14,7 @@ class FlutterViewController: FBFlutterViewContainer {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setName("ShopList", uniqueId: "main", params: ["animated": true])
+        setName("ShopList", uniqueId: "main", params: ["animated": true], opaque: true)
 
     }
     

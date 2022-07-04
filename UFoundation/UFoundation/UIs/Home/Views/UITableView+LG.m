@@ -13,11 +13,11 @@ const char *LGDefaultView;
 @implementation UITableView (LG)
 
 + (void)load {
-    Method originMethod = class_getInstanceMethod(self, @selector(reloadData));
-    
-    Method currentMethod = class_getInstanceMethod(self, @selector(lg_reloadData));
-    
-    method_exchangeImplementations(originMethod, currentMethod);
+//    Method originMethod = class_getInstanceMethod(self, @selector(reloadData));
+//    
+//    Method currentMethod = class_getInstanceMethod(self, @selector(lg_reloadData));
+//    
+//    method_exchangeImplementations(originMethod, currentMethod);
 }
 
 

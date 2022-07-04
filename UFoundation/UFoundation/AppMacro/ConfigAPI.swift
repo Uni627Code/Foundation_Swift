@@ -18,6 +18,5 @@ class ConfigAPI {
     static let instance = ConfigAPI()
     
     let host = "https://testbms.einyun.com/"
-        
 
 }

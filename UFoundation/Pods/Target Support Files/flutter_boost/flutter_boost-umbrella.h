@@ -15,7 +15,7 @@
 #import "FlutterBoostPlugin.h"
 #import "FBFlutterViewContainer.h"
 #import "FBFlutterContainer.h"
-#import "FlutterBoostOptions.h"
+#import "Options.h"
 #import "messages.h"
 
 FOUNDATION_EXPORT double flutter_boostVersionNumber;

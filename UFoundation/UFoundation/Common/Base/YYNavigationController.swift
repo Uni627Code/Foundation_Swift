@@ -7,26 +7,45 @@
 //
 
 import UIKit
+import AttributedString
 
 public class YYNavigationController: UINavigationController{
-
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.delegate = self
-
+        
         self.interactivePopGestureRecognizer?.delaysTouchesBegan = true
         self.interactivePopGestureRecognizer?.delegate = self
         self.interactivePopGestureRecognizer?.isEnabled = true
-
-        self.navigationBar.shadowImage = UIImage.init()
-
-        self.navigationBar.barStyle = UIBarStyle.default
-        self.navigationBar.barTintColor = .white
-        self.navigationBar.isTranslucent = true
         
-        self.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor :UIColor.black,NSAttributedString.Key.font:UIFont.systemFont(ofSize: 15)]
-
+        let attribute = [NSAttributedString.Key.foregroundColor :UIColor.black,NSAttributedString.Key.font:UIFont.systemFont(ofSize: 18)]
+        
+        if #available(iOS 15.0, *) {
+            let apperance = UINavigationBarAppearance()
+            apperance.backgroundColor = .white;//设置背景色
+            
+            //设置标题字体
+            apperance.titleTextAttributes = attribute
+            
+            apperance.shadowImage = UIImage()
+            apperance.shadowColor=nil;//分割线去除
+            
+            UINavigationBar.appearance().standardAppearance = apperance;
+            UINavigationBar.appearance().scrollEdgeAppearance = UINavigationBar.appearance().standardAppearance
+        } else {
+            self.navigationBar.shadowImage = UIImage.init()
+            
+            self.navigationBar.barStyle = UIBarStyle.default
+            self.navigationBar.barTintColor = .white
+            self.navigationBar.isTranslucent = true
+            
+            self.navigationBar.titleTextAttributes = attribute
+            
+        }
+        
+       
     }
 }
 
@@ -40,7 +59,7 @@ extension YYNavigationController
             
             let backBtn = UIButton(type: .custom)
             backBtn.frame = CGRect(x: 0, y: 0, width: 70, height: 32)
-
+            
             //返回按钮的图片-状态
             backBtn.setImage(UIImage(named: "navi_back"), for: .normal)
             
@@ -54,7 +73,7 @@ extension YYNavigationController
         }
         super.pushViewController(viewController, animated: animated)
     }
-
+    
     //返回上一层控制器
     @objc func leftClick()  {
         
@@ -85,7 +104,7 @@ extension YYNavigationController: UIGestureRecognizerDelegate {
 
 extension YYNavigationController: UINavigationControllerDelegate {
     public func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-            return nil
+        return nil
     }
 }
 

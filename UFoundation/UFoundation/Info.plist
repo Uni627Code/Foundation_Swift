@@ -20,8 +20,21 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>请求访问蓝牙</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>请求访问蓝牙</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>允许此权限才能使用定位功能</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>允许此权限才能使用定位功能</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>bluetooth-central</string>
+		<string>bluetooth-peripheral</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

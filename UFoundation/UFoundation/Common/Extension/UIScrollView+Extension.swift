@@ -7,7 +7,7 @@
 
 import MJRefresh
 
-@objc public protocol RefreshDelegate: class {
+@objc public protocol RefreshDelegate {
     @objc optional func loadData()
     @objc optional func loadMoreData()
 }

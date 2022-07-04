@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import flutter_boost
+//import flutter_boost
 
 class OtherViewController: UITableViewController {
     
@@ -59,18 +59,18 @@ extension OtherViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let router = PlatformRouter()
-        switch indexPath.row {
-        case 0:
-            router.open("mainPage", urlParams: ["params": "这是参数"], exts: ["animated": true]) { (bool) in
-                //将原生页面的数据回传到flutter侧的页面的的方法
-                FlutterBoost.instance()?.sendResultToFlutter(withPageName: "mainPage", arguments: ["event": "value111"])
-            }
-            
-        default:
-                FlutterBoost.instance()?.open("mainPage", arguments: ["animated": true], completion: { (bool) in
-        
-                })
-        }
+//        let router = PlatformRouter()
+//        switch indexPath.row {
+//        case 0:
+//            router.open("mainPage", urlParams: ["params": "这是参数"], exts: ["animated": true]) { (bool) in
+//                //将原生页面的数据回传到flutter侧的页面的的方法
+//                FlutterBoost.instance()?.sendResultToFlutter(withPageName: "mainPage", arguments: ["event": "value111"])
+//            }
+//            
+//        default:
+//                FlutterBoost.instance()?.open("mainPage", arguments: ["animated": true], completion: { (bool) in
+//        
+//                })
+//        }
     }
 }

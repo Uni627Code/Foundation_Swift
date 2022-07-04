@@ -19,7 +19,7 @@ class AFPerson: NSObject {
     }
 }
 
-extension AFPerson: LGDecodable {
+extension AFPerson: HttpDecodable {
     
     static func parse(json: Any) -> Self? {
         

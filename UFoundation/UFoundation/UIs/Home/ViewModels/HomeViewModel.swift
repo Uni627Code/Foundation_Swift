@@ -11,7 +11,7 @@ class HomeViewModel: NSObject {
 
     var id: String?
     
-    var name: String?
+    @objc dynamic var name: String?
     
     
     @objc func sendMessage(_ message: String) {
@@ -25,7 +25,7 @@ class HomeViewModel: NSObject {
 }
 
 
-class AFPersonRequest: LCRequest {
+class AFPersonRequest: HttpOptions {
         
     typealias LGResponse = LGPersonArray
     

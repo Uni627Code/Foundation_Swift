@@ -9,20 +9,23 @@ import UIKit
 import SnapKit
 import Flutter
 import flutter_boost
+import RxCocoa
+import RxSwift
 
 @main
-class AppDelegate: FlutterAppDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
-//    var window: UIWindow?
+    var window: UIWindow?
+    
 
-    override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         //初始化
         if let flutterBoost = FlutterBoost.instance() {
             let router = PlatformRouter()
             flutterBoost.setup(application, delegate: router, callback: { (engine) in
                 PrintLog.info("#######  flutterEngine  #########")
-            })        
+            })
         }
        
         window = UIWindow(frame: UIScreen.main.bounds)
